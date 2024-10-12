@@ -33,12 +33,39 @@ const RestaurantMenu = () => {
   // );
 
   //Some menu cards have itemCards at REGULAR.cards[1] and some at REGULAR.cards[2]
-  const { itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-      ?.card ||
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-      ?.card ||
-    {};
+
+  // const { itemCards } =
+  //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+  //     ?.card ||
+  //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+  //     ?.card ||
+  //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+  //     ?.categories[0] ||
+  //   {};
+
+  var items = null;
+
+  if (
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card
+      ?.itemCards
+  ) {
+    item =
+      resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card
+        ?.card;
+  } else if (
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card
+      ?.itemCards
+  ) {
+    item =
+      resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card
+        ?.card;
+  } else {
+    item =
+      resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+        ?.card?.categories[0];
+  }
+
+  const { itemCards } = item;
 
   return (
     <div className="menu">
