@@ -35,7 +35,7 @@ const RestaurantMenu = () => {
   }
 
   const { itemCards } = item;
-  console.log(itemCards);
+  // console.log(itemCards);
 
   return (
     <div className="menu">
