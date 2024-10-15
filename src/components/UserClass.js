@@ -1,35 +1,46 @@
-import React from "react";
-
+import React, { Children } from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      count: 0,
+      userInfo: {
+        name: "Dummy",
+        location: "Default",
+      },
     };
-    console.log("Constructor called");
+    console.log(this.props.name + " Child Constructor");
+  }
+
+  async componentDidMount() {
+    const data = await fetch("https://api.github.com/users/yashwith26");
+    const json = await data.json();
+    console.log(json);
+
+    this.setState({
+      userInfo: json,
+    });
+    console.log(this.props.name + " Child Component Did Mount");
+  }
+
+  componentDidUpdate() {
+    console.log("Component did Update");
+  }
+
+  componentWillUnmount() {
+    console.log("Component will Unmount");
   }
 
   render() {
-    const { name, location, contact } = this.props;
-    const { count, count2 } = this.state;
-    console.log("render called");
+    console.log(this.props.name + " Child Render");
+    const { name, location, avatar_url } = this.state.userInfo;
 
     return (
       <div className="user-card">
-        <h1>Count: {count}</h1>
-        <button
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        >
-          Count Increase
-        </button>
+        <img src={avatar_url} />
         <h2>Name: {name}</h2>
         <h3>Location: {location}</h3>
-        <h4>Contact: {contact}</h4>
+        <h4>Contact: yashwithsalian1999@gmail.com</h4>
       </div>
     );
   }
