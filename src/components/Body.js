@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
@@ -88,6 +88,8 @@ const Body = () => {
       </h1>
     );
 
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -129,12 +131,16 @@ const Body = () => {
         </div>
       </div>
       <div className="flex flex-wrap">
-        {filteredRestaurants.map((restuarant) => (
+        {filteredRestaurants.map((restaurant) => (
           <Link
-            key={restuarant.info.id}
-            to={"/restaurants/" + restuarant.info.id}
+            key={restaurant.info.id}
+            to={"/restaurants/" + restaurant.info.id}
           >
-            <RestaurantCard resData={restuarant} />
+            {restaurant.info.avgRating > 4.4 ? (
+              <RestaurantCardPromoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
@@ -143,3 +149,7 @@ const Body = () => {
 };
 
 export default Body;
+
+{
+  /* Promoted is not present in Swiggy's API hence I will use the avgRating field to show promoted */
+}

@@ -1,6 +1,7 @@
 import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
+  // console.log(props);
   const { resData } = props;
 
   const {
@@ -26,6 +27,19 @@ const RestaurantCard = (props) => {
       <h4 className="pb-4">{deliveryTime + " mins"}</h4>
     </div>
   );
+};
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black opacity-65 text-white ml-4 p-1 rounded-lg">
+          Promoted
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;
