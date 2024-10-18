@@ -1,7 +1,6 @@
 import { ITEMS_URL } from "../utils/constants";
 
 const ItemList = ({ items }) => {
-  console.log(items);
   return (
     <div>
       <div>
@@ -22,9 +21,11 @@ const ItemList = ({ items }) => {
               </div>
               <p className="text-xs">{item.card.info.description}</p>
             </div>
-            <div className="w-3/12 p-4">
+            <div className="w-3/12 p-4 ">
               <div className="absolute">
-                <button className="p-2 bg-white shadow-lg  m-auto">Add+</button>
+                <button className="p-1 mx-18 rounded-lg bg-white shadow-lg font-bold text-teal-600">
+                  ADD
+                </button>
               </div>
 
               <img
