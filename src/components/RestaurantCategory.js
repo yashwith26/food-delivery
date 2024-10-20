@@ -1,12 +1,12 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
-const RestaurantCategory = ({ data }) => {
-  const [showItems, setShowItems] = useState(false);
+const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
+  const [toggle, setToggle] = useState(false);
 
   const handleClick = () => {
-    setShowItems(!showItems);
+    setShowIndex();
+    setToggle(!toggle);
   };
-
   return (
     <div>
       {/* Accordian Header */}
@@ -18,10 +18,10 @@ const RestaurantCategory = ({ data }) => {
           <span className="font-bold text-lg ">
             {data.title} ({data.itemCards.length})
           </span>
-          <span>⬇️</span>
+          {showItems ? <span>⬆️</span> : <span>⬇️</span>}
         </div>
 
-        {showItems && <ItemList items={data.itemCards} />}
+        {showItems && toggle && <ItemList items={data.itemCards} />}
       </div>
       {/* Accordian body */}
     </div>
