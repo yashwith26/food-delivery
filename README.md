@@ -1,4 +1,4 @@
-#Namaste React
+#React
 
 #Parcel
 -Dev Build
@@ -20,7 +20,7 @@
 -Tree Shaking - remove unused code  
 -Different dev and prod bundles
 
-#Namaste Food
+#Food
 
 /\*\*
 
@@ -41,3 +41,12 @@
 - -Address
 - -Contact
   \*/
+
+  # Redux Toolkit
+
+  - Install @reduxjs/toolkit and react-redux
+  - Build our own store
+  - Connect our store to our app
+    -Slice (cartSlice)
+    -dispatch(action)
+    -Selector
