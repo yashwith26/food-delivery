@@ -18,7 +18,10 @@ const RestaurantCard = (props) => {
   } = resData?.info;
 
   return (
-    <div className="m-4 p-4 w-[220px] rounded-xl bg-gray-200 hover:bg-gray-400">
+    <div
+      data-testid="rescard"
+      className="m-4 p-4 w-[220px] rounded-xl bg-gray-200 hover:bg-gray-400"
+    >
       <img
         className="res-logo rounded-xl h-[150px] w-[250px]"
         alt="res-logo"

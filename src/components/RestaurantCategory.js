@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
+
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const [toggle, setToggle] = useState(false);
 
@@ -18,7 +19,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
           <span className="font-bold text-lg ">
             {data.title} ({data.itemCards.length})
           </span>
-          {showItems ? <span>⬆️</span> : <span>⬇️</span>}
+          {showItems && toggle ? <span>⬆️</span> : <span>⬇️</span>}
         </div>
 
         {showItems && toggle && <ItemList items={data.itemCards} />}

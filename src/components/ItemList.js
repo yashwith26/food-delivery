@@ -15,18 +15,19 @@ const ItemList = ({ items }) => {
       <div>
         {items.map((item) => (
           <div
+            data-testid="foodItems"
             key={item.card.info.id}
-            className="p-2 m-2 border-gray-200 border-b-2 text-left flex justify-between"
+            className="p-2 my-2 border-gray-200 border-b-2 text-left flex justify-between"
           >
             <div className="w-9/12">
-              <div className="py-2">
+              <div className="py-2 font-bold">
                 <span>{item.card.info.name}</span>
-                <span>
-                  - ₹
+                <p>
+                  ₹
                   {item.card.info.price
                     ? item.card.info.price / 100
                     : item.card.info.defaultPrice / 100}
-                </span>
+                </p>
               </div>
               <p className="text-xs">{item.card.info.description}</p>
             </div>

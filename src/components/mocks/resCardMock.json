@@ -1,0 +1,105 @@
+{
+    "info": {
+        "id": "72823",
+        "name": "Domino's Pizza",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/22/58422cda-6430-41d4-b9b5-2b7f09e54bab_72823.jpg",
+        "locality": "Belathur Village",
+        "areaName": "Whitefield",
+        "costForTwo": "₹400 for two",
+        "cuisines": [
+            "Pizzas",
+            "Italian",
+            "Pastas",
+            "Desserts"
+        ],
+        "avgRating": 4.5,
+        "parentId": "2456",
+        "avgRatingString": "4.5",
+        "totalRatingsString": "10K+",
+        "sla": {
+            "deliveryTime": 30,
+            "lastMileTravel": 2.6,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "2.6 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-10-24 02:59:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "Green%20Dot%20Awards/Best%20In%20Veg%20Pizza.png",
+                    "description": "Delivery!"
+                },
+                {
+                    "imageId": "Rxawards/_CATEGORY-Pizza.png",
+                    "description": "Delivery!"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "Delivery!",
+                                "imageId": "Green%20Dot%20Awards/Best%20In%20Veg%20Pizza.png"
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "description": "Delivery!",
+                                "imageId": "Rxawards/_CATEGORY-Pizza.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "₹125 OFF",
+            "subHeader": "ABOVE ₹1199",
+            "discountTag": "FLAT DEAL"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-eeeadf37-1a27-4b90-ada0-d26338b58079"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/bangalore/dominos-pizza-belathur-village-whitefield-rest72823",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

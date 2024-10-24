@@ -103,6 +103,7 @@ const Body = () => {
         <div className=" search m-4 p-4">
           <input
             type="text"
+            data-testid="searchInput"
             className=" border border-solid border-black"
             value={searchText}
             onChange={(e) => {
@@ -126,7 +127,7 @@ const Body = () => {
             className="px-4 py-2 bg-gray-100 m-4 rounded-lg"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4.3
+                (res) => res.info.avgRating >= 4.3
               );
               setFilteredRestaurants(filteredList);
             }}
@@ -150,7 +151,7 @@ const Body = () => {
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
           >
-            {restaurant.info.avgRating > 4.4 ? (
+            {restaurant.info.avgRating > 4.3 ? (
               <RestaurantCardPromoted resData={restaurant} />
             ) : (
               <RestaurantCard resData={restaurant} />
