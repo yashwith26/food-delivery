@@ -104,7 +104,7 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput"
-            className=" border border-solid border-black"
+            className=" border border-solid border-black p-1 rounded-xl bg-slate-100"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -136,15 +136,16 @@ const Body = () => {
           </button>
         </div>
 
-        <div className=" search m-4 p-4 flex items-center">
+        {/* <div className=" search m-4 p-4 flex items-center">
           <label>User Name</label>
           <input
             className="border border-black p-2 ml-2"
             value={loggedInUser}
             onChange={(e) => setUserName(e.target.value)}
           ></input>
-        </div>
+        </div> */}
       </div>
+
       <div className="flex flex-wrap">
         {filteredRestaurants.map((restaurant) => (
           <Link
