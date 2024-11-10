@@ -19,7 +19,7 @@ const RestaurantCard = (props) => {
   return (
     <div
       data-testid="rescard"
-      className="m-4 p-4 w-[220px] rounded-xl bg-gray-200 hover:bg-gray-400"
+      className="m-4 p-4 w-[220px] h-[300px] rounded-xl bg-gray-200 hover:bg-gray-400"
     >
       <div className="flex justify-center">
         <img
@@ -32,7 +32,7 @@ const RestaurantCard = (props) => {
       <h3 className="font-bold pt-3 px-1 text-lg">{name}</h3>
       <h4 className="font-semibold px-1">{avgRating + " • " + slaString}</h4>
 
-      <h4 className="text-xs px-1">{cuisines.join(", ")}</h4>
+      <h4 className="text-sm px-1">{cuisines.slice(0, 4).join(", ")}</h4>
       {/* <h4 className="pb-4">{costForTwo}</h4> */}
     </div>
   );

@@ -1,8 +1,9 @@
 import { ITEMS_URL } from "../utils/constants";
-import { addItem } from "../utils/cartSlice";
-import { useDispatch } from "react-redux";
+import { addItem, showCartBtn } from "../utils/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const ItemList = ({ items }) => {
+  const showBt = useSelector((store) => store.cart.showCartbt);
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
@@ -33,12 +34,14 @@ const ItemList = ({ items }) => {
             </div>
             <div className="w-3/12 p-4 relative ">
               {/* <div className="absolute"> */}
-              <button
-                className=" absolute p-2 bottom-1 left-16 rounded-lg bg-white shadow-lg font-bold text-teal-600 hover:bg-slate-300"
-                onClick={() => handleAddItem(item)}
-              >
-                ADD
-              </button>
+              {showBt && (
+                <button
+                  className=" absolute p-2 bottom-1 left-16 rounded-lg bg-white shadow-lg font-bold text-teal-600 hover:bg-slate-300"
+                  onClick={() => handleAddItem(item)}
+                >
+                  ADD
+                </button>
+              )}
               {/* </div> */}
               <img
                 src={ITEMS_URL + item.card.info.imageId}

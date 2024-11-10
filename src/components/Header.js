@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
-import image from "../images/company_logo.png";
+import image from "../images/company_logo_main.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
-  const [btnName, setButtonname] = useState("Login");
+  // const [btnName, setButtonname] = useState("Login");
 
   //Feature not needed
   const onlineStatus = useOnlineStatus();
@@ -39,13 +41,16 @@ const Header = () => {
           <li className="px-4 hover:scale-110 hover:text-orange-700 font-semibold">
             <Link to="/grocery">Grocery </Link>
           </li>
-          <li className="px-4 ">
+          <li className="px-4 hover:scale-110 font-semibold hover:text-orange-700 ">
             <Link to="login">
               <button>Sign In</button>
             </Link>
           </li>
           <li className="px-4 font-bold">
-            <Link to="/cart"> Cart- ({cartItems.length})</Link>
+            <Link to="/cart">
+              {" "}
+              <FontAwesomeIcon icon={faCartShopping} />({cartItems.length})
+            </Link>
           </li>
           {/* <button
             onClick={() =>

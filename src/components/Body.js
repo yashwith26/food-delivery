@@ -104,14 +104,14 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput"
-            className=" border border-solid border-black p-1 rounded-xl bg-slate-100"
+            className=" border border-gray-500 p-1 rounded-xl "
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
+            className="px-3  py-1 bg-gray-100 m-4 rounded-lg border border-gray-500  "
             onClick={() => {
               const filteredRestaurants = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -124,7 +124,7 @@ const Body = () => {
         </div>
         <div className=" search m-4 p-4 flex items-center">
           <button
-            className="px-4 py-2 bg-gray-100 m-4 rounded-lg"
+            className="px-3 py-1 bg-gray-100 m-4 rounded-lg border border-gray-500"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res.info.avgRating >= 4.3
