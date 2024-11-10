@@ -50,3 +50,5 @@
     -Slice (cartSlice)
     -dispatch(action)
     -Selector
+
+# To open this app you need to install CORS extension on your browser - https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
