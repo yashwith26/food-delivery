@@ -48,8 +48,12 @@ const Header = () => {
           </li>
           <li className="px-4 font-bold">
             <Link to="/cart">
-              {" "}
-              <FontAwesomeIcon icon={faCartShopping} />({cartItems.length})
+              <FontAwesomeIcon icon={faCartShopping} />
+              {cartItems.length > 0 && (
+                <span className="text-xs align-text-top">
+                  ({cartItems.length})
+                </span>
+              )}
             </Link>
           </li>
           {/* <button
