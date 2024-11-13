@@ -19,7 +19,7 @@ const RestaurantCard = (props) => {
   return (
     <div
       data-testid="rescard"
-      className="m-4 p-4 w-[220px] h-[300px] rounded-xl bg-gray-200 hover:bg-gray-400"
+      className="m-4 p-4 w-[220px] h-[300px] rounded-xl bg-gray-200 hover:bg-gray-400 shadow-lg"
     >
       <div className="flex justify-center">
         <img

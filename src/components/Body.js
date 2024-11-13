@@ -99,12 +99,12 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter flex">
-        <div className=" search m-4 p-4">
+      <div className="filter flex justify-start">
+        <div className=" search mx-4 p-4 w-1/2">
           <input
             type="text"
             data-testid="searchInput"
-            className=" border border-gray-500 p-1 rounded-xl "
+            className=" border border-gray-500  bg-gray-100 p-1 rounded-xl w-1/2 px-3  "
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -122,7 +122,7 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div className=" search m-4 p-4 flex items-center">
+        {/* <div className=" search m-4 p-4 flex items-center">
           <button
             className="px-3 py-1 bg-gray-100 m-4 rounded-lg border border-gray-500"
             onClick={() => {
@@ -134,7 +134,7 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
-        </div>
+        </div> */}
 
         {/* <div className=" search m-4 p-4 flex items-center">
           <label>User Name</label>
