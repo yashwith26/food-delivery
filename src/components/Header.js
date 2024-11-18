@@ -38,9 +38,9 @@ const Header = () => {
           <li className="px-4 hover:scale-110 hover:text-orange-700 font-semibold">
             <Link to="/contact">Contact Us </Link>
           </li>
-          <li className="px-4 hover:scale-110 hover:text-orange-700 font-semibold">
+          {/* <li className="px-4 hover:scale-110 hover:text-orange-700 font-semibold">
             <Link to="/grocery">Grocery </Link>
-          </li>
+          </li> */}
           <li className="px-4 hover:scale-110 font-semibold hover:text-orange-700 ">
             <Link to="login">
               <button>Sign In</button>
@@ -48,8 +48,12 @@ const Header = () => {
           </li>
           <li className="px-4 font-bold">
             <Link to="/cart">
-              {" "}
-              <FontAwesomeIcon icon={faCartShopping} />({cartItems.length})
+              <FontAwesomeIcon icon={faCartShopping} />
+              {cartItems.length > 0 && (
+                <span className="text-xs align-text-top">
+                  ({cartItems.length})
+                </span>
+              )}
             </Link>
           </li>
           {/* <button
