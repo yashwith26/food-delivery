@@ -1,6 +1,6 @@
 import { ITEMS_URL } from "../utils/constants";
-import { addItem, showCartBtn } from "../utils/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 const ItemList = ({ items }) => {
   const dispatch = useDispatch();
